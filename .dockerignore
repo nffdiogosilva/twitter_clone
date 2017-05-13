@@ -1,0 +1,11 @@
+.git
+.env
+.idea
+.eyeglass_cache
+.DS_Store
+bower_components
+node_modules
+src/core/sass
+/resources
+Dockerfile*
+docker-compose.*yml
