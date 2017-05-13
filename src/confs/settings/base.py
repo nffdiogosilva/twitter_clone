@@ -49,7 +49,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
 
     # Custom apps
-    # 'core',
+    'core',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -96,9 +96,15 @@ WSGI_APPLICATION = 'confs.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
+# DATABASES = {
+#     # URL schema: https://github.com/kennethreitz/dj-database-url#url-schema
+#     'default': dj_database_url.config(default='sqlite:////⁄./database.sqlite'),
+# }
 DATABASES = {
-    # URL schema: https://github.com/kennethreitz/dj-database-url#url-schema
-    'default': dj_database_url.config(),
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite'),
+    }
 }
 
 
